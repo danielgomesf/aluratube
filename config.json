@@ -2,6 +2,21 @@
     "name": "Daniel Gomes Falcão",
     "job": "Full Stack Software Engineer",
     "github": "danielgomesf",
+    "banner": "photo-1506765515384-028b60a970df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
+    "favorites": {
+        "aluratubes favoritos": [
+            {
+                "name": "AluraOnline",
+                "url": "https://www.youtube.com/c/Alura",
+                "thumb": "https://yt3.ggpht.com/xqhIoXspeX7eqouJvNHl1xqpv9213Pl26ENZbuouXxO2RlDadjsveNXfgnj8GTUk7thFYUkVRg=s176-c-k-c0x00ffffff-no-rj"
+            },
+            {
+                "name": "omariosouto",
+                "url": "https://www.youtube.com/c/DevSoutinho",
+                "thumb": "https://yt3.ggpht.com/m8Yrqf0Y81L4mZ1Cq7rGnJ4NDHe6729rxiFZvWyy9-xd_Z7Osmza7J8NWpN1axMHcCb1oKJNgA=s176-c-k-c0x00ffffff-no-rj"
+            }
+        ]
+    },
     "playlists": {
         "jogos": [
             {
@@ -10,7 +25,7 @@
                 "thumb": "https://img.youtube.com/vi/QsqatJxAUtk/hqdefault.jpg"
             },
             {
-                "title": "Frostpunk - Neve e Steak tartare",
+                "title": "Remakes MAIS IMPORTANTES de Pokémon - Retrospectiva Pokémon Fire Red e Leaf Green",
                 "url": "https://www.youtube.com/watch?v=O8jtAyPuhNg",
                 "thumb": "https://img.youtube.com/vi/O8jtAyPuhNg/hqdefault.jpg"
             },
@@ -52,7 +67,7 @@
                 "thumb": "https://img.youtube.com/vi/jOAU81jdi-c/hqdefault.jpg"
             },
             {
-                "title": "Jogo com JavaScript #01: Criando um Flappy Bird do ZERO!!!",
+                "title": "LANDING PAGE COM HTML e CSS!",
                 "url": "https://www.youtube.com/watch?v=llF6vD-RljE",
                 "thumb": "https://img.youtube.com/vi/llF6vD-RljE/hqdefault.jpg"
             },
@@ -99,7 +114,7 @@
                 "thumb": "https://img.youtube.com/vi/dvd3pNYh7So/hqdefault.jpg"
             },
             {
-                "title": "Node JS: Construindo CRUDs com file system focando em serialização e JSON",
+                "title": "CRUD Angular + Spring | 29: Atualizar Curso: Salvando o Formulário",
                 "url": "https://www.youtube.com/watch?v=8q36rNS5yVo",
                 "thumb": "https://img.youtube.com/vi/8q36rNS5yVo/hqdefault.jpg"
             },
