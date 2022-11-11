@@ -2,10 +2,6 @@ import styled from "styled-components";
 import config from "../../config.json";
 
 const StyledHeader = styled.div`
-    img {
-        width: 100%;
-        height: 400px;
-    }
     section img {
         width: 80px;
         height: 80px;
@@ -20,12 +16,17 @@ const StyledHeader = styled.div`
     }
   `;
 
+const StyledBanner = styled.img`
+    width: 100%;
+    height: 400px;
+`; 
+
 export default function Header(props) {
     return (
         <StyledHeader>
-            <img src={`https://images.unsplash.com/${props.banner}`} />
+            <StyledBanner src={props.banner} />
             <section className="user-info">
-                <img src={`https://github.com/${config.github}.png`} />
+                <img src={`https://github.com/${props.githubPhoto}.png`} />
                 <div>
                     <h2>
                         {config.name}

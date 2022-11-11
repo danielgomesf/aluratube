@@ -1,3 +1,4 @@
+import React from "react";
 import config from "../config.json";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
@@ -7,14 +8,14 @@ import Favorites from "../src/components/Favorites";
 
 
 function HomePage() {
-
+    const [valorDoFiltro, setValorDoFiltro ] = React.useState("");
     return (
         <>
             <CSSReset />
             <div>
-                <Menu />
-                <Header banner={config.banner}/>
-                <Timeline playlists={config.playlists} />
+                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
+                <Header banner={config.banner} githubPhoto={config.github} />
+                <Timeline  searchValue={valorDoFiltro} playlists={config.playlists} />
                 <Favorites favorites={config.favorites}/>
             </div>
         </>
