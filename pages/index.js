@@ -1,6 +1,5 @@
 import React from "react";
 import config from "../config.json";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import Timeline from "../src/components/Timeline";
 import Header from "../src/components/Header";
@@ -11,7 +10,6 @@ function HomePage() {
     const [valorDoFiltro, setValorDoFiltro ] = React.useState("");
     return (
         <>
-            <CSSReset />
             <div>
                 <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
                 <Header banner={config.banner} githubPhoto={config.github} />

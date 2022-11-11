@@ -51,12 +51,12 @@ export default function Favorites(props) {
             {channels.map((channel) => {
                 const canais = props.favorites[channel]
                 return (
-                    <section>
+                    <section key={channel}>
                         <h2>{channel}</h2>
                         <div>
                             {canais.map((favorite) => {
                                 return (
-                                    <a href={favorite.url}>
+                                    <a key={favorite.url} href={favorite.url}>
                                         <img src={favorite.thumb} />
                                         <span>@{favorite.name}</span>
                                     </a>
