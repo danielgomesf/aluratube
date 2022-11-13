@@ -1,5 +1,6 @@
 import { StyledRegisterVideo } from "./styles";
 import React from "react";
+import { videoService } from "../../services/videoService";
 
 //Custom Hook
 function useForm(formProps) {
@@ -23,6 +24,7 @@ function useForm(formProps) {
 }
 
 export default function RegisterVideo() {
+    const service = videoService();
     const formCadastro = useForm({
         initialValues: { titulo: "", url: ""},
     });
@@ -47,6 +49,14 @@ export default function RegisterVideo() {
                 <form
                     onSubmit={(evento) => {
                         evento.preventDefault();
+
+                        service.insertVideo({
+                            title: formCadastro.values.titulo,
+                            url: formCadastro.values.url,
+                            thumb: getVideoThumbnail(formCadastro.values.url),
+                            playlist: formCadastro.values.playlist
+                        });
+
                         setFormVisivel(false);
                         formCadastro.clearForm();
                     }}>
@@ -69,6 +79,13 @@ export default function RegisterVideo() {
                             placeholder="URL"
                             name="url"
                             value={formCadastro.values.url}
+                            onChange={formCadastro.handleChange}
+                            required
+                        />
+                        <input
+                            placeholder="Playlist"
+                            name="playlist"
+                            value={formCadastro.values.playlist}
                             onChange={formCadastro.handleChange}
                             required
                         />
