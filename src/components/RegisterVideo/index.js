@@ -29,12 +29,12 @@ export default function RegisterVideo() {
     const [ formVisivel, setFormVisivel ] = React.useState(false);
 
     function getVideoThumbnail(url) { 
-        let imgThumb = url.split('v=');
-        let source = `https://img.youtube.com/vi/${imgThumb[1]}/hqdefault.jpg`
-        if (source) {
-            return (
-                <img src={source} /> 
-            );
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var imgThumb = url.match(regExp);
+        if (imgThumb && imgThumb[7].length == 11) {
+            return `https://img.youtube.com/vi/${imgThumb[7]}/hqdefault.jpg`;
+        } else {
+            return false;
         }
     };
 
@@ -73,7 +73,9 @@ export default function RegisterVideo() {
                             required
                         />
                         <button type="submit">Cadastrar</button>
-                        {getVideoThumbnail(formCadastro.values.url)} 
+                        {getVideoThumbnail(formCadastro.values.url) ? (
+                            <img src={getVideoThumbnail(formCadastro.values.url)} />
+                        ) : false} 
                     </div>
                 </form>
             ) : false}
